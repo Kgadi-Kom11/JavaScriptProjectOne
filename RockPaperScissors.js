@@ -1,10 +1,12 @@
-let randomChoice = Math.floor(Math.random() * 3) + 1;
+
 
 function getComputerChoice() {
-    if () {
+    let randomChoice = Math.floor(Math.random() * 3) + 1;
+
+    if (randomChoice === 1) {
         return "rock";
     }
-    elseif () {
+    else if (randomChoice === 2) {
         return "paper";
     }
     else 
@@ -13,4 +15,6 @@ function getComputerChoice() {
     }
 }
 
-console.log("Hello, world!");
+let computerChoice = getComputerChoice();
+
+console.log(computerChoice);
