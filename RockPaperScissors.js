@@ -1,13 +1,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
-/*function getComputerChoice() {
-    let randomChoice = Math.floor(Math.random() * 3) + 1;
+function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3) + 1;
 
-    if (randomChoice === 1) {
+    if (computerChoice === 1) {
         return "rock";
     }
-    else if (randomChoice === 2) {
+    else if (computerChoice === 2) {
         return "paper";
     }
     else 
@@ -15,18 +15,14 @@ let computerScore = 0;
         return "scissors";
     }
 }
-*/
-//let computerChoice = getComputerChoice();
-
-//console.log(computerChoice);
 
 function getHumanChoice() {
-    let humanChoice = window.prompt("Your Choice: ", "Rock")
+    let humanChoice = window.prompt("Your Choice: ")
 
-    if (humanChoice === "Rock") {
+    if (humanChoice === "rock") {
         return "Rock";
     }
-    else if(humanChoice === "Paper") {
+    else if(humanChoice === "paper") {
         return "Paper";
     }
     else {
@@ -34,5 +30,31 @@ function getHumanChoice() {
     }
 }
 
-let mychoice = getHumanChoice();
-console.log(mychoice)
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "paper" && computerChoice === "rock") {
+        return "You win. Paper beats Rock";
+        humanScore += 1;
+    }
+    else if(humanChoice ==="scissors" && computerChoice === "paper") {
+        return "You win. Scissors beats Paper";
+        humanScore += 1;
+    }
+    else if(humanChoice === "rock" && computerChoice === "scissors") {
+        return "You win. Rock beats Scissors";
+        humanScore += 1;
+    }
+    else if (humanChoice === computerChoice) {
+        return "You Tie. Play again";
+        humanChoice = 0;
+        computerChoice = 0;
+    }
+    else {
+        return "You Lose. " + computerChoice + "beats " + humanChoice;
+        computerChoice += 1;
+    }
+}
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+console.log(playRound);
