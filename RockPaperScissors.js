@@ -54,7 +54,26 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice()
+        console.log(playRound(humanChoice, computerChoice));
+    }
+
+    if (humanScore > computerScore) {
+        return "You have beaten the computer";
+    }
+    else if(computerScore > humanScore) {
+        return "The computer has beaten you."
+    }
+    else {
+        return "You tied with the computer. Try again."
+    }
+}
+
+
+//let humanChoice = getHumanChoice();
+//let computerChoice = getComputerChoice();
 
 console.log(playRound);
