@@ -16,7 +16,6 @@ let computerScore = 0;
 let currentRound = 1;
 let totalRounds = 5
 
-
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         userChoice = e.target.textContent;
