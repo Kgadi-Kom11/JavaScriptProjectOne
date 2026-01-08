@@ -1,0 +1,50 @@
+body {
+    background-color: #496A81; /*Blue Slate Color, #2b3a67 - Twilight Indigo, 66999b - Pacific Blue*/
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.board {
+    width: 300px;
+    height: 80px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+#userScore, #computerScore {
+    margin-top: 0;
+}
+
+#user-choice, #computer-choice {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #66999B;
+    padding: 10px 10px;
+    margin: 0px 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.scores {
+    text-align: center;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.final-winner {
+    font-size: 30px ;
+    font-weight: bold;
+}
